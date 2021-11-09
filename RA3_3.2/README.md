@@ -1,4 +1,4 @@
-# Autenticació contra servers <!-- omit in toc -->
+# Autenticació contra servers  <!-- omit in toc -->
 
 Genera i utilitza diferents certificats digitals com a mitjà d'accés a un servidor remot.
 
@@ -9,7 +9,6 @@ Genera i utilitza diferents certificats digitals com a mitjà d'accés a un serv
 - [Instal·la la clau pública al servidor que té el servei ssh](#installa-la-clau-pública-al-servidor-que-té-el-servei-ssh)
 - [Configura el servei ssh per tal que només es pugui fer login mitjançant claus RSA](#configura-el-servei-ssh-per-tal-que-només-es-pugui-fer-login-mitjançant-claus-rsa)
 - [Configura el client per tal que s'autentiqui automàticament mitjançant el fitxer config](#configura-el-client-per-tal-que-sautentiqui-automàticament-mitjançant-el-fitxer-config)
-
 ## Instal·la un servei ssh en un Ubuntu server virual machine
 
 ```
