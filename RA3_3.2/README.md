@@ -97,6 +97,13 @@ sudo systemctl restart ssh
 ```
 vi ~/.ssh/config
 ```
+```
+Host konoha
+	Hostname 192.168.2.169
+	Port 2266
+	User tonipm
+	IdentityFile ~/.ssh/server_auth
+```
 
 ![alt_text](images/image05.png "image_tooltip")
 
