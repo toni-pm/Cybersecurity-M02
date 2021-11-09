@@ -43,11 +43,11 @@ Dades desencriptades:
 
 ```json
 {
-    user_id: 1,
-    user_nickname: 'tperaira',
-    user_mail: 'a2102226@institutmontilivi.cat',
-    iat: 1635271824,
-    exp: 1649671824
+    "user_id": 1,
+    "user_nickname": "tperaira",
+    "user_mail": "a2102226@institutmontilivi.cat",
+    "iat": 1635271824,
+    "exp": 1649671824
 }
 ```
 
