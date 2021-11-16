@@ -29,6 +29,8 @@ El motiu pel qual es fa amb les simètriques és perquè és més ràpid de desx
 ![alt_text](images/tls01.png "Funcionament TLS")
 Imatge extreta de [CLOUDFLARE](https://blog.cloudflare.com/tls-1-3-overview-and-q-and-a/#:~:text=In%20TLS%201.3%20a%20client,agreement%20algorithm%20%22cipher%20suite%22.).
 
+Encara que TLS 1.3 es va definir al 2018, la gran majoria de llocs segueix fent servir TLS 1.2, com per exemple Amazon. Com l'última versió és més estricte i "quisquillosa" encara es segueix fent servir l'anterior que segueix sent segura.
+
 ## Visita un lloc web i explica on podem trobar el seu certificat digital que ens permet navegar de forma segura.
 
 El certificat digital el podem trobar fent click sobre el candau que hi ha al costat de l'adreça del navegador.
