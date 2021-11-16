@@ -18,7 +18,7 @@ sudo systemctl enable ssh
 
 sudo systemctl start ssh
 
-systemctl status
+systemctl status ssh
 ```
 
 ![alt_text](images/image01.png "image_tooltip")
