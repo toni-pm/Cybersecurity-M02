@@ -1,17 +1,3 @@
-<!-----
-title: "CRYPTO - Competition"
-author: "Toni Peraira"
-date: "2022-01-11"
-version: "1.0"
-geometry: left=2.54cm,right=2.54cm,top=2.54cm,bottom=2.54cm
-header-right: '\headerlogo'
-header-includes:
-- '`\newcommand{\headerlogo}{\raisebox{0pt}[0pt]{\includegraphics[width=3cm]{../institut_montilivi.png}}}`{=latex}'
----
-
-pandoc README.md -o Toni_Peraira_CRYPTO_Competition.pdf --from markdown --template eisvogel --listings --pdf-engine=xelatex --toc -s -V toc-title:"Índex"
--->
-
 # CRYPTO - Competition <!-- omit in toc -->
 
 A continuació hi ha un fitxer de passwords d'una empresa real que va tancar les seves portes fa temps a la comarca de girona. 
@@ -37,7 +23,7 @@ Contestar les preguntes i passar el challenge amb el professor pot assegurar-te 
 ## Instal·la l'eina hashcat o demostra que la tens instal·lada i la seva versió
 
 ```console
-➜  ~ hashcat --version
+hashcat --version
 v5.1.0
 ```
 
