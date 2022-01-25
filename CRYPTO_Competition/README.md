@@ -49,54 +49,39 @@ Es tracta del tipus **md5crypt**, MD5 (Unix), Cisco-IOS $1$ (MD5). Que correspon
 
 md5crypt és un algoritme de xifrat vulnerable, no perquè l'algoritme criptogràfic sigui feble sinó perquè és molt ràpid d'utilitzar. És a dir, es poden provar moltes possibles contrasenyes en poc temps. A classe hem pogut provar moltes possibilitats fent servir les nostres GPU, amb altres tipus de hash més lents haguessim tardat molt més. 
 
-Podem fer servir el mode benchmark del hashcat per comprovar el hashrate del nostre hardware per cada tipus de hash.
+Podem fer servir el mode benchmark del hashcat per comprovar el hashrate del nostre hardware per cada tipus de hash. Amb això comprovem que els mil·lisegons en el md5crypt són molt més baixos, podrem provar moltes més possibilitats que amb els altres.
 
 ```console
-➜  ~ hashcat -b --force
-hashcat (v5.1.0) starting in benchmark mode...
+hashcat -b
+------------------------------------------------------------------------------                                                      
+* Hash-Mode 500 (md5crypt, MD5 (Unix), Cisco-IOS $1$ (MD5)) [Iterations: 1000]                                                      
+------------------------------------------------------------------------------
 
-Benchmarking uses hand-optimized kernel code by default.
-You can use it in your cracking session by setting the -O option.
-Note: Using optimized kernel code limits the maximum supported password length.
-To disable the optimized kernel code in benchmark mode, use the -w option.
+Speed.#2.........: 13138.6 MH/s (91.23ms) @ Accel:128 Loops:1024 Thr:256 Vec:1
 
-OpenCL Platform #1: The pocl project
-====================================
-* Device #1: pthread-Intel(R) Core(TM) i7-3632QM CPU @ 2.20GHz, 4096/13785 MB allocatable, 8MCU
+----------------------                                                                                                              
+* Hash-Mode 100 (SHA1)                                                                                                              
+----------------------                                                                                                                                                                                                                                                  
+Speed.#2.........:  4119.4 MH/s (72.74ms) @ Accel:128 Loops:1024 Thr:64 Vec:1  
 
-Benchmark relevant options:
-===========================
-* --force
-* --optimized-kernel-enable
-
-Hashmode: 0 - MD5
-
-Speed.#1.........:   246.3 MH/s (32.01ms) @ Accel:1024 Loops:1024 Thr:1 Vec:8
-
-Hashmode: 100 - SHA1
-
-Speed.#1.........:   101.0 MH/s (78.31ms) @ Accel:1024 Loops:1024 Thr:1 Vec:8
-
-Hashmode: 1400 - SHA2-256
-
-Speed.#1.........: 38680.5 kH/s (51.03ms) @ Accel:1024 Loops:256 Thr:1 Vec:8
-
-Hashmode: 1700 - SHA2-512
-
-Speed.#1.........:  8273.2 kH/s (59.70ms) @ Accel:512 Loops:128 Thr:1 Vec:4
-
-Hashmode: 2500 - WPA-EAPOL-PBKDF2 (Iterations: 4096)
-
-Speed.#1.........:     3544 H/s (55.44ms) @ Accel:512 Loops:256 Thr:1 Vec:8
-
-Hashmode: 1000 - NTLM
-
-Speed.#1.........:   361.4 MH/s (21.97ms) @ Accel:1024 Loops:1024 Thr:1 Vec:8
-
+---------------------------                                                                                                         
+* Hash-Mode 1400 (SHA2-256)                                                                                                         
+---------------------------                                                                                                                                                                                                                                             
+Speed.#2.........:  1697.6 MH/s (88.40ms) @ Accel:64 Loops:1024 Thr:64 Vec:1                                                                                                                                                                                           
+---------------------------                                                                                                         
+* Hash-Mode 1700 (SHA2-512)                                                                                                         
+---------------------------                                                                                                                                                                                                                                             
+Speed.#2.........:   447.2 MH/s (83.92ms) @ Accel:32 Loops:512 Thr:64 Vec:1 
 ```
 
 ```console
-hashcat -b -m 500 --force
+hashcat -b -m 500
+
+------------------------------------------------------------------------------
+* Hash-Mode 500 (md5crypt, MD5 (Unix), Cisco-IOS $1$ (MD5)) [Iterations: 1000]
+------------------------------------------------------------------------------
+
+Speed.#2.........:  4933.9 kH/s (54.67ms) @ Accel:512 Loops:250 Thr:64 Vec:1
 ```
 
 ## Com ho faries per petar hashos més ràpid que els demés?
